@@ -5,5 +5,5 @@
 - ****Introduction to Big Data – Theory****
 ## Day 2
 - ****Introduction to Azure platform****
-
+## Day 3
 - ****Store data in Azure****
