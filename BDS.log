@@ -1,0 +1,53 @@
+01-Nov-20 18:07:25 - Init started
+01-Nov-20 18:07:25 - Init finished
+01-Nov-20 18:07:25 - task has been started
+01-Nov-20 18:07:25 - create_container has been started
+01-Nov-20 18:07:25 - Request URL: 'https://bds01tro.blob.core.windows.net/trotsenkodaniil03?restype=REDACTED&sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+01-Nov-20 18:07:25 - Request method: 'PUT'
+01-Nov-20 18:07:25 - Request headers:
+01-Nov-20 18:07:25 -     'x-ms-version': 'REDACTED'
+01-Nov-20 18:07:25 -     'x-ms-date': 'REDACTED'
+01-Nov-20 18:07:25 -     'x-ms-client-request-id': '5520ccee-1c5c-11eb-b67b-04d4c47a1bd8'
+01-Nov-20 18:07:25 -     'User-Agent': 'azsdk-python-storage-blob/12.5.0 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+01-Nov-20 18:07:25 - No body was attached to the request
+01-Nov-20 18:07:25 - Response status: 201
+01-Nov-20 18:07:25 - Response headers:
+01-Nov-20 18:07:25 -     'Content-Length': '0'
+01-Nov-20 18:07:25 -     'Last-Modified': 'Sun, 01 Nov 2020 16:07:26 GMT'
+01-Nov-20 18:07:25 -     'ETag': '"0x8D87E803A04A29F"'
+01-Nov-20 18:07:25 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+01-Nov-20 18:07:25 -     'x-ms-request-id': 'd351271a-e01e-0057-4969-b0574b000000'
+01-Nov-20 18:07:25 -     'x-ms-client-request-id': '5520ccee-1c5c-11eb-b67b-04d4c47a1bd8'
+01-Nov-20 18:07:25 -     'x-ms-version': 'REDACTED'
+01-Nov-20 18:07:25 -     'Date': 'Sun, 01 Nov 2020 16:07:26 GMT'
+01-Nov-20 18:07:25 - create_container has been finished
+01-Nov-20 18:07:25 - upload_file has been started
+01-Nov-20 18:07:25 - upload_file has been finished
+01-Nov-20 18:07:25 - upload_blob has been finished
+01-Nov-20 18:07:26 - Request URL: 'https://bds01tro.blob.core.windows.net/trotsenkodaniil03/IndianFoodDatasetCSV.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+01-Nov-20 18:07:26 - Request method: 'PUT'
+01-Nov-20 18:07:26 - Request headers:
+01-Nov-20 18:07:26 -     'Content-Type': 'application/octet-stream'
+01-Nov-20 18:07:26 -     'Content-Length': '24151935'
+01-Nov-20 18:07:26 -     'x-ms-version': 'REDACTED'
+01-Nov-20 18:07:26 -     'x-ms-blob-type': 'REDACTED'
+01-Nov-20 18:07:26 -     'If-None-Match': '*'
+01-Nov-20 18:07:26 -     'x-ms-date': 'REDACTED'
+01-Nov-20 18:07:26 -     'x-ms-client-request-id': '55647c2e-1c5c-11eb-9619-04d4c47a1bd8'
+01-Nov-20 18:07:26 -     'User-Agent': 'azsdk-python-storage-blob/12.5.0 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+01-Nov-20 18:07:26 - A body is sent with the request
+01-Nov-20 18:07:30 - Response status: 201
+01-Nov-20 18:07:30 - Response headers:
+01-Nov-20 18:07:30 -     'Content-Length': '0'
+01-Nov-20 18:07:30 -     'Content-MD5': 'REDACTED'
+01-Nov-20 18:07:30 -     'Last-Modified': 'Sun, 01 Nov 2020 16:07:31 GMT'
+01-Nov-20 18:07:30 -     'ETag': '"0x8D87E803C963CAC"'
+01-Nov-20 18:07:30 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+01-Nov-20 18:07:30 -     'x-ms-request-id': 'd351272f-e01e-0057-5b69-b0574b000000'
+01-Nov-20 18:07:30 -     'x-ms-client-request-id': '55647c2e-1c5c-11eb-9619-04d4c47a1bd8'
+01-Nov-20 18:07:30 -     'x-ms-version': 'REDACTED'
+01-Nov-20 18:07:30 -     'x-ms-content-crc64': 'REDACTED'
+01-Nov-20 18:07:30 -     'x-ms-request-server-encrypted': 'REDACTED'
+01-Nov-20 18:07:30 -     'Date': 'Sun, 01 Nov 2020 16:07:30 GMT'
+01-Nov-20 18:07:30 - upload_blob has been finished
+01-Nov-20 18:07:30 - task has been finished
