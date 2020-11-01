@@ -4,6 +4,7 @@ import logging
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
 
+
 class BdsBlob:
     logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s',
                         datefmt='%d-%b-%y %H:%M:%S', level=logging.INFO,
@@ -65,6 +66,11 @@ class BdsBlob:
 
         logging.info("task has been finished")
 
+    def get_containers(self):
+        all_containers = self.blob_service_client.list_containers(include_metadata=True)
+        for container in all_containers:
+            print(container['name'], container['metadata'])
+
 
 '''AZURE_STORAGE_CONNECTION_STRING'''
 '''AZURE_STORAGE_CONNECTION_BDS'''
@@ -74,6 +80,7 @@ def main():
     connect_str = os.getenv('AZURE_STORAGE_CONNECT_STRING')
     bds = BdsBlob(connect_str, container_name_="trotsenkodaniil")
     bds.task()
+    bds.get_containers()
 
 
 if __name__ == "__main__":
