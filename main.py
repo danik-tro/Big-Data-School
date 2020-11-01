@@ -4,8 +4,8 @@ import logging
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
 
-class BDS:
-    logging.basicConfig(format='%(asctime)s - %(message)s',
+class BdsBlob:
+    logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s',
                         datefmt='%d-%b-%y %H:%M:%S', level=logging.INFO,
                         filename='BDS.log',
                         filemode='w')
@@ -51,27 +51,28 @@ class BDS:
         try:
             self.create_container()
         except Exception as ex:
-            logging.error("Exception occurred", exc_info=True)
+            logging.error("Exception occurred in create_container", exc_info=True)
 
         try:
             self.upload_file()
         except Exception as ex:
-            logging.error("Exception occurred", exc_info=True)
+            logging.error("Exception occurred in upload_file", exc_info=True)
 
         try:
             self.upload_blob()
         except Exception as ex:
-            logging.error("Exception occurred", exc_info=True)
+            logging.error("Exception occurred in upload_blob", exc_info=True)
 
         logging.info("task has been finished")
 
-#connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
-#connect_str_bds = os.getenv('AZURE_STORAGE_CONNECTION_BDS')
+
+'''AZURE_STORAGE_CONNECTION_STRING'''
+'''AZURE_STORAGE_CONNECTION_BDS'''
 
 
 def main():
     connect_str = os.getenv('AZURE_STORAGE_CONNECT_STRING')
-    bds = BDS(connect_str, container_name_="trotsenkodaniil03")
+    bds = BdsBlob(connect_str, container_name_="trotsenkodaniil")
     bds.task()
 
 
