@@ -4,7 +4,6 @@ import logging
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
 
-
 class BdsBlob:
     logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s',
                         datefmt='%d-%b-%y %H:%M:%S', level=logging.INFO,
@@ -74,6 +73,7 @@ class BdsBlob:
 
 '''AZURE_STORAGE_CONNECTION_STRING'''
 '''AZURE_STORAGE_CONNECTION_BDS'''
+'''AZURE_STORAGE_CONNECT_STRING'''
 
 
 def main():
