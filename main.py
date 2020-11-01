@@ -2,8 +2,14 @@ import os
 
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
-connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
 
+class BDS_Blob_Upload:
+    def __init__(self, conection_string):
+        pass
+
+
+connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+print(connect_str)
 
 try:
     blob_service_client = BlobServiceClient.from_connection_string(connect_str)
