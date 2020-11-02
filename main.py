@@ -21,25 +21,19 @@ class BdsBlob:
     container_client: ContainerClient
     blob_client: BlobClient
 
+    @logging_name_function
     def __init__(self, connection_string, container_name_="trotsenkodaniil", file_name_='IndianFoodDatasetCSV.csv'):
-        logging.info("Init started")
-
         self.connection_str = connection_string
         self.container_name = container_name_
         self.file_name = file_name_
 
-        logging.info("Init finished")
-
+    @logging_name_function
     def upload_file(self):
-        logging.info("upload_file has been started")
-
         self.blob_client = self.blob_service_client.get_blob_client(container=self.container_name,
                                                                     blob=self.file_name)
-        logging.info("upload_file has been finished")
 
+    @logging_name_function
     def create_container(self):
-        logging.info("create_container has been started")
-
         self.blob_service_client = BlobServiceClient.from_connection_string(self.connection_str)
         self.container_client = self.blob_service_client.create_container(self.container_name)
 
@@ -51,11 +45,8 @@ class BdsBlob:
         with open(self.file_name, 'rb') as data:
             self.blob_client.upload_blob(data)
 
-        logging.info("upload_blob has been finished")
-
+    @logging_name_function
     def task(self):
-        logging.info("task has been started")
-
         try:
             self.create_container()
         except Exception as ex:
@@ -70,8 +61,6 @@ class BdsBlob:
             self.upload_blob()
         except Exception as ex:
             logging.error("Exception occurred in upload_blob", exc_info=True)
-
-        logging.info("task has been finished")
 
     @logging_name_function
     def get_containers(self):
