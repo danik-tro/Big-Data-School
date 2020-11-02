@@ -37,11 +37,8 @@ class BdsBlob:
         self.blob_service_client = BlobServiceClient.from_connection_string(self.connection_str)
         self.container_client = self.blob_service_client.create_container(self.container_name)
 
-        logging.info("create_container has been finished")
-
+    @logging_name_function
     def upload_blob(self):
-        logging.info("upload_blob has been finished")
-
         with open(self.file_name, 'rb') as data:
             self.blob_client.upload_blob(data)
 
