@@ -4,6 +4,14 @@ import logging
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
 
+def logging_name_function(func):
+    def wrap(*args, **kwargs):
+        logging.info(f"{func.__name__} has been started")
+        func(*args)
+        logging.info(f"{func.__name__} has been finished")
+    return wrap
+
+
 class BdsBlob:
     logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s',
                         datefmt='%d-%b-%y %H:%M:%S', level=logging.INFO,
@@ -65,10 +73,14 @@ class BdsBlob:
 
         logging.info("task has been finished")
 
+    @logging_name_function
     def get_containers(self):
-        all_containers = self.blob_service_client.list_containers(include_metadata=True)
-        for container in all_containers:
-            print(container['name'], container['metadata'])
+        try:
+            all_containers = self.blob_service_client.list_containers(include_metadata=True)
+            for container in all_containers:
+                print(container['name'], container['metadata'])
+        except Exception as ex:
+            logging.error("Exception occurred in get_containers", exc_info=True)
 
 
 '''AZURE_STORAGE_CONNECTION_STRING'''

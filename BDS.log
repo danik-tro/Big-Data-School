@@ -1,72 +1,73 @@
-INFO - 01-Nov-20 18:31:02 - Init started
-INFO - 01-Nov-20 18:31:02 - Init finished
-INFO - 01-Nov-20 18:31:02 - task has been started
-INFO - 01-Nov-20 18:31:02 - create_container has been started
-INFO - 01-Nov-20 18:31:02 - Request URL: 'https://bigdatachoolstr01.blob.core.windows.net/trotsenkodaniil?restype=REDACTED&sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
-INFO - 01-Nov-20 18:31:02 - Request method: 'PUT'
-INFO - 01-Nov-20 18:31:02 - Request headers:
-INFO - 01-Nov-20 18:31:02 -     'x-ms-version': 'REDACTED'
-INFO - 01-Nov-20 18:31:02 -     'x-ms-date': 'REDACTED'
-INFO - 01-Nov-20 18:31:02 -     'x-ms-client-request-id': 'a1cfa4bf-1c5f-11eb-b734-04d4c47a1bd8'
-INFO - 01-Nov-20 18:31:02 -     'User-Agent': 'azsdk-python-storage-blob/12.5.0 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 01-Nov-20 18:31:02 - No body was attached to the request
-INFO - 01-Nov-20 18:31:03 - Response status: 201
-INFO - 01-Nov-20 18:31:03 - Response headers:
-INFO - 01-Nov-20 18:31:03 -     'Content-Length': '0'
-INFO - 01-Nov-20 18:31:03 -     'Last-Modified': 'Sun, 01 Nov 2020 16:31:03 GMT'
-INFO - 01-Nov-20 18:31:03 -     'ETag': '"0x8D87E8386ABD740"'
-INFO - 01-Nov-20 18:31:03 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 01-Nov-20 18:31:03 -     'x-ms-request-id': 'ee74aee3-d01e-0096-3b6c-b0e937000000'
-INFO - 01-Nov-20 18:31:03 -     'x-ms-client-request-id': 'a1cfa4bf-1c5f-11eb-b734-04d4c47a1bd8'
-INFO - 01-Nov-20 18:31:03 -     'x-ms-version': 'REDACTED'
-INFO - 01-Nov-20 18:31:03 -     'Date': 'Sun, 01 Nov 2020 16:31:02 GMT'
-INFO - 01-Nov-20 18:31:03 - create_container has been finished
-INFO - 01-Nov-20 18:31:03 - upload_file has been started
-INFO - 01-Nov-20 18:31:03 - upload_file has been finished
-INFO - 01-Nov-20 18:31:03 - upload_blob has been finished
-INFO - 01-Nov-20 18:31:03 - Request URL: 'https://bigdatachoolstr01.blob.core.windows.net/trotsenkodaniil/IndianFoodDatasetCSV.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
-INFO - 01-Nov-20 18:31:03 - Request method: 'PUT'
-INFO - 01-Nov-20 18:31:03 - Request headers:
-INFO - 01-Nov-20 18:31:03 -     'Content-Type': 'application/octet-stream'
-INFO - 01-Nov-20 18:31:03 -     'Content-Length': '24151935'
-INFO - 01-Nov-20 18:31:03 -     'x-ms-version': 'REDACTED'
-INFO - 01-Nov-20 18:31:03 -     'x-ms-blob-type': 'REDACTED'
-INFO - 01-Nov-20 18:31:03 -     'If-None-Match': '*'
-INFO - 01-Nov-20 18:31:03 -     'x-ms-date': 'REDACTED'
-INFO - 01-Nov-20 18:31:03 -     'x-ms-client-request-id': 'a20aa445-1c5f-11eb-bca8-04d4c47a1bd8'
-INFO - 01-Nov-20 18:31:03 -     'User-Agent': 'azsdk-python-storage-blob/12.5.0 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 01-Nov-20 18:31:03 - A body is sent with the request
-INFO - 01-Nov-20 18:31:07 - Response status: 201
-INFO - 01-Nov-20 18:31:07 - Response headers:
-INFO - 01-Nov-20 18:31:07 -     'Content-Length': '0'
-INFO - 01-Nov-20 18:31:07 -     'Content-MD5': 'REDACTED'
-INFO - 01-Nov-20 18:31:07 -     'Last-Modified': 'Sun, 01 Nov 2020 16:31:08 GMT'
-INFO - 01-Nov-20 18:31:07 -     'ETag': '"0x8D87E83893CD67C"'
-INFO - 01-Nov-20 18:31:07 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-request-id': 'ee74af02-d01e-0096-576c-b0e937000000'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-client-request-id': 'a20aa445-1c5f-11eb-bca8-04d4c47a1bd8'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-version': 'REDACTED'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-content-crc64': 'REDACTED'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-request-server-encrypted': 'REDACTED'
-INFO - 01-Nov-20 18:31:07 -     'Date': 'Sun, 01 Nov 2020 16:31:07 GMT'
-INFO - 01-Nov-20 18:31:07 - upload_blob has been finished
-INFO - 01-Nov-20 18:31:07 - task has been finished
-INFO - 01-Nov-20 18:31:07 - Request URL: 'https://bigdatachoolstr01.blob.core.windows.net/?include=REDACTED&comp=REDACTED&sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
-INFO - 01-Nov-20 18:31:07 - Request method: 'GET'
-INFO - 01-Nov-20 18:31:07 - Request headers:
-INFO - 01-Nov-20 18:31:07 -     'Accept': 'application/xml'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-version': 'REDACTED'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-date': 'REDACTED'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-client-request-id': 'a49a7b3a-1c5f-11eb-b973-04d4c47a1bd8'
-INFO - 01-Nov-20 18:31:07 -     'User-Agent': 'azsdk-python-storage-blob/12.5.0 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 01-Nov-20 18:31:07 - No body was attached to the request
-INFO - 01-Nov-20 18:31:07 - Response status: 403
-INFO - 01-Nov-20 18:31:07 - Response headers:
-INFO - 01-Nov-20 18:31:07 -     'Content-Length': '284'
-INFO - 01-Nov-20 18:31:07 -     'Content-Type': 'application/xml'
-INFO - 01-Nov-20 18:31:07 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-request-id': 'ee74b59e-d01e-0096-656c-b0e937000000'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-client-request-id': 'a49a7b3a-1c5f-11eb-b973-04d4c47a1bd8'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-version': 'REDACTED'
-INFO - 01-Nov-20 18:31:07 -     'x-ms-error-code': 'REDACTED'
-INFO - 01-Nov-20 18:31:07 -     'Date': 'Sun, 01 Nov 2020 16:31:07 GMT'
+INFO - 02-Nov-20 14:45:33 - Init started
+INFO - 02-Nov-20 14:45:33 - Init finished
+INFO - 02-Nov-20 14:45:33 - task has been started
+INFO - 02-Nov-20 14:45:33 - create_container has been started
+INFO - 02-Nov-20 14:45:33 - Request URL: 'https://bds01tro.blob.core.windows.net/trotsenkodaniil?restype=REDACTED&sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+INFO - 02-Nov-20 14:45:33 - Request method: 'PUT'
+INFO - 02-Nov-20 14:45:33 - Request headers:
+INFO - 02-Nov-20 14:45:33 -     'x-ms-version': 'REDACTED'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-date': 'REDACTED'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-client-request-id': '4bf71ac9-1d09-11eb-934e-04d4c47a1bd8'
+INFO - 02-Nov-20 14:45:33 -     'User-Agent': 'azsdk-python-storage-blob/12.5.0 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 02-Nov-20 14:45:33 - No body was attached to the request
+INFO - 02-Nov-20 14:45:33 - Response status: 201
+INFO - 02-Nov-20 14:45:33 - Response headers:
+INFO - 02-Nov-20 14:45:33 -     'Content-Length': '0'
+INFO - 02-Nov-20 14:45:33 -     'Last-Modified': 'Mon, 02 Nov 2020 12:45:33 GMT'
+INFO - 02-Nov-20 14:45:33 -     'ETag': '"0x8D87F2D3099BE91"'
+INFO - 02-Nov-20 14:45:33 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-request-id': '70a8377e-801e-0051-2a16-b164f4000000'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-client-request-id': '4bf71ac9-1d09-11eb-934e-04d4c47a1bd8'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-version': 'REDACTED'
+INFO - 02-Nov-20 14:45:33 -     'Date': 'Mon, 02 Nov 2020 12:45:33 GMT'
+INFO - 02-Nov-20 14:45:33 - create_container has been finished
+INFO - 02-Nov-20 14:45:33 - upload_file has been started
+INFO - 02-Nov-20 14:45:33 - upload_file has been finished
+INFO - 02-Nov-20 14:45:33 - upload_blob has been finished
+INFO - 02-Nov-20 14:45:33 - Request URL: 'https://bds01tro.blob.core.windows.net/trotsenkodaniil/IndianFoodDatasetCSV.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+INFO - 02-Nov-20 14:45:33 - Request method: 'PUT'
+INFO - 02-Nov-20 14:45:33 - Request headers:
+INFO - 02-Nov-20 14:45:33 -     'Content-Type': 'application/octet-stream'
+INFO - 02-Nov-20 14:45:33 -     'Content-Length': '24151935'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-version': 'REDACTED'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-blob-type': 'REDACTED'
+INFO - 02-Nov-20 14:45:33 -     'If-None-Match': '*'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-date': 'REDACTED'
+INFO - 02-Nov-20 14:45:33 -     'x-ms-client-request-id': '4c211b25-1d09-11eb-889c-04d4c47a1bd8'
+INFO - 02-Nov-20 14:45:33 -     'User-Agent': 'azsdk-python-storage-blob/12.5.0 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 02-Nov-20 14:45:33 - A body is sent with the request
+INFO - 02-Nov-20 14:45:36 - Response status: 201
+INFO - 02-Nov-20 14:45:36 - Response headers:
+INFO - 02-Nov-20 14:45:36 -     'Content-Length': '0'
+INFO - 02-Nov-20 14:45:36 -     'Content-MD5': 'REDACTED'
+INFO - 02-Nov-20 14:45:36 -     'Last-Modified': 'Mon, 02 Nov 2020 12:45:37 GMT'
+INFO - 02-Nov-20 14:45:36 -     'ETag': '"0x8D87F2D3289E67B"'
+INFO - 02-Nov-20 14:45:36 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-request-id': '70a83795-801e-0051-3e16-b164f4000000'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-client-request-id': '4c211b25-1d09-11eb-889c-04d4c47a1bd8'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-version': 'REDACTED'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-content-crc64': 'REDACTED'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-request-server-encrypted': 'REDACTED'
+INFO - 02-Nov-20 14:45:36 -     'Date': 'Mon, 02 Nov 2020 12:45:36 GMT'
+INFO - 02-Nov-20 14:45:36 - upload_blob has been finished
+INFO - 02-Nov-20 14:45:36 - task has been finished
+INFO - 02-Nov-20 14:45:36 - get_containers has been started
+INFO - 02-Nov-20 14:45:36 - Request URL: 'https://bds01tro.blob.core.windows.net/?include=REDACTED&comp=REDACTED&sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
+INFO - 02-Nov-20 14:45:36 - Request method: 'GET'
+INFO - 02-Nov-20 14:45:36 - Request headers:
+INFO - 02-Nov-20 14:45:36 -     'Accept': 'application/xml'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-version': 'REDACTED'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-date': 'REDACTED'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-client-request-id': '4e11495e-1d09-11eb-b10a-04d4c47a1bd8'
+INFO - 02-Nov-20 14:45:36 -     'User-Agent': 'azsdk-python-storage-blob/12.5.0 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 02-Nov-20 14:45:36 - No body was attached to the request
+INFO - 02-Nov-20 14:45:36 - Response status: 200
+INFO - 02-Nov-20 14:45:36 - Response headers:
+INFO - 02-Nov-20 14:45:36 -     'Transfer-Encoding': 'chunked'
+INFO - 02-Nov-20 14:45:36 -     'Content-Type': 'application/xml'
+INFO - 02-Nov-20 14:45:36 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-request-id': '70a83b20-801e-0051-2d16-b164f4000000'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-client-request-id': '4e11495e-1d09-11eb-b10a-04d4c47a1bd8'
+INFO - 02-Nov-20 14:45:36 -     'x-ms-version': 'REDACTED'
+INFO - 02-Nov-20 14:45:36 -     'Date': 'Mon, 02 Nov 2020 12:45:36 GMT'
+INFO - 02-Nov-20 14:45:36 - get_containers has been finished
