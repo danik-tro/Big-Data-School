@@ -20,7 +20,9 @@ class BdsBlob:
     blob_client: BlobClient
 
     @logging_name_function
-    def __init__(self, connection_string, container_name_="trotsenkodaniil", file_name_='IndianFoodDatasetCSV.csv'):
+    def __init__(self, connection_string,
+                 container_name_="trotsenkodaniil",
+                 file_name_='IndianFoodDatasetCSV.csv'):
         self.connection_str = connection_string
         self.container_name = container_name_
         self.file_name = file_name_
