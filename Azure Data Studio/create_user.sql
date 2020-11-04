@@ -8,3 +8,7 @@ CREATE USER d_trotsenko
 	FOR LOGIN [d_trotsenko]
 	WITH DEFAULT_SCHEMA = d_trotsenko_schema
 GO
+
+-- Add user to the database owner role
+EXEC sp_addrolemember N'db_owner', N'd_trotsenko'
+GO
