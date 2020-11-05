@@ -12,7 +12,7 @@ CREATE EXTERNAL FILE FORMAT trotsenko_format WITH
 	(
 		FIELD_TERMINATOR = N',',
 		STRING_DELIMITER = N'',
-		DATE_FORMAT = N'yyyy-MM-dd',
+		DATE_FORMAT = N'yyyy-MM-dd HH:mm:ss',
 		USE_TYPE_DEFAULT = False
 	)
 )
