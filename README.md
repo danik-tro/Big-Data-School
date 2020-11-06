@@ -1,14 +1,6 @@
 # Big Data School
 ## Microsoft SQL Management Studio
-#### SQL
-````
-CREATE LOGIN WanidaBenshoof   
-    WITH PASSWORD = '8fdKJl3$nlNv3049jsKK';  
-USE AdventureWorks2012;  
-CREATE USER Wanida FOR LOGIN WanidaBenshoof   
-    WITH DEFAULT_SCHEMA = Marketing;  
-GO  
-````
+## Azure Data Studio
 
 
 ## Other details
