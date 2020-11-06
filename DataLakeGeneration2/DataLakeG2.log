@@ -1,23 +1,24 @@
-INFO - 06-Nov-20 22:32:19 - create_file_system has been started
-INFO - 06-Nov-20 22:32:19 - Request URL: 'https://bds0tro.blob.core.windows.net/container03?restype=REDACTED&sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
-INFO - 06-Nov-20 22:32:19 - Request method: 'PUT'
-INFO - 06-Nov-20 22:32:19 - Request headers:
-INFO - 06-Nov-20 22:32:19 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:32:19 -     'x-ms-date': 'REDACTED'
-INFO - 06-Nov-20 22:32:19 -     'x-ms-client-request-id': '2ac4d863-206f-11eb-8649-04d4c47a1bd8'
-INFO - 06-Nov-20 22:32:19 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 06-Nov-20 22:32:19 - No body was attached to the request
-INFO - 06-Nov-20 22:32:20 - Response status: 409
-INFO - 06-Nov-20 22:32:20 - Response headers:
-INFO - 06-Nov-20 22:32:20 -     'Content-Length': '230'
-INFO - 06-Nov-20 22:32:20 -     'Content-Type': 'application/xml'
-INFO - 06-Nov-20 22:32:20 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-request-id': 'd94ada50-601e-002a-6e7b-b43ff6000000'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-client-request-id': '2ac4d863-206f-11eb-8649-04d4c47a1bd8'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-error-code': 'REDACTED'
-INFO - 06-Nov-20 22:32:20 -     'Date': 'Fri, 06 Nov 2020 20:32:19 GMT'
-ERROR - 06-Nov-20 22:32:20 - Exception occurred in create_file_system
+INFO - 06-Nov-20 22:47:28 - create_file_system has been started
+INFO - 06-Nov-20 22:47:28 - Request URL: 'https://bds0tro.blob.core.windows.net/container03?restype=REDACTED'
+INFO - 06-Nov-20 22:47:28 - Request method: 'PUT'
+INFO - 06-Nov-20 22:47:28 - Request headers:
+INFO - 06-Nov-20 22:47:28 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-client-request-id': '4892aa42-2071-11eb-8431-04d4c47a1bd8'
+INFO - 06-Nov-20 22:47:28 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 22:47:28 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 - No body was attached to the request
+INFO - 06-Nov-20 22:47:28 - Response status: 409
+INFO - 06-Nov-20 22:47:28 - Response headers:
+INFO - 06-Nov-20 22:47:28 -     'Content-Length': '230'
+INFO - 06-Nov-20 22:47:28 -     'Content-Type': 'application/xml'
+INFO - 06-Nov-20 22:47:28 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-request-id': '0872a55b-801e-001d-277e-b4ed5a000000'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-client-request-id': '4892aa42-2071-11eb-8431-04d4c47a1bd8'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-error-code': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 -     'Date': 'Fri, 06 Nov 2020 20:47:28 GMT'
+ERROR - 06-Nov-20 22:47:28 - Exception occurred in create_file_system
 Traceback (most recent call last):
   File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\blob\_container_client.py", line 280, in create_container
     return self._client.container.create( # type: ignore
@@ -28,8 +29,8 @@ azure.storage.blob._generated.models._models_py3.StorageErrorException: Operatio
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:/Users/Daniil Trotsenko/Documents/Educate/Python/BDS/DataLakeGeneration2/data_lake_gen_2.py", line 41, in create_file_system
-    self.file_system_client = self.dt_service.create_file_system(file_system=self.file_system_name)
+  File "C:/Users/Daniil Trotsenko/Documents/Educate/Python/BDS/DataLakeGeneration2/data_lake_gen_2.py", line 48, in create_file_system
+    self.file_system_client = self.service_client.create_file_system(file_system=self.file_system_name)
   File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_data_lake_service_client.py", line 246, in create_file_system
     file_system_client.create_file_system(metadata=metadata, public_access=public_access, **kwargs)
   File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_file_system_client.py", line 241, in create_file_system
@@ -41,63 +42,76 @@ Traceback (most recent call last):
   File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\blob\_shared\response_handlers.py", line 147, in process_storage_error
     raise error
 azure.core.exceptions.ResourceExistsError: The specified container already exists.
-RequestId:d94ada50-601e-002a-6e7b-b43ff6000000
-Time:2020-11-06T20:32:20.5635651Z
+RequestId:0872a55b-801e-001d-277e-b4ed5a000000
+Time:2020-11-06T20:47:29.5146259Z
 ErrorCode:ContainerAlreadyExists
 Error:None
-INFO - 06-Nov-20 22:32:20 - create_file_system has been finished
-INFO - 06-Nov-20 22:32:20 - create_directory has been started
-INFO - 06-Nov-20 22:32:20 - Request URL: 'https://bds0tro.blob.core.windows.net/container03/folder_1?resource=REDACTED&sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'
-INFO - 06-Nov-20 22:32:20 - Request method: 'PUT'
-INFO - 06-Nov-20 22:32:20 - Request headers:
-INFO - 06-Nov-20 22:32:20 -     'x-ms-properties': 'REDACTED'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-date': 'REDACTED'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-client-request-id': '2b05b6a7-206f-11eb-895d-04d4c47a1bd8'
-INFO - 06-Nov-20 22:32:20 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 06-Nov-20 22:32:20 - No body was attached to the request
-INFO - 06-Nov-20 22:32:20 - Response status: 400
-INFO - 06-Nov-20 22:32:20 - Response headers:
-INFO - 06-Nov-20 22:32:20 -     'Content-Length': '301'
-INFO - 06-Nov-20 22:32:20 -     'Content-Type': 'application/xml'
-INFO - 06-Nov-20 22:32:20 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-error-code': 'REDACTED'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-request-id': 'd94ada91-601e-002a-247b-b43ff6000000'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:32:20 -     'x-ms-client-request-id': '2b05b6a7-206f-11eb-895d-04d4c47a1bd8'
-INFO - 06-Nov-20 22:32:20 -     'Date': 'Fri, 06 Nov 2020 20:32:19 GMT'
-ERROR - 06-Nov-20 22:32:20 - Exception occurred in create_directory
-Traceback (most recent call last):
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_path_client.py", line 193, in _create
-    return self._client.path.create(**options)
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_generated\operations\_path_operations.py", line 251, in create
-    raise models.StorageErrorException(response, self._deserialize)
-azure.storage.filedatalake._generated.models._models_py3.StorageErrorException: Operation returned an invalid status 'An HTTP header that's mandatory for this request is not specified.'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:/Users/Daniil Trotsenko/Documents/Educate/Python/BDS/DataLakeGeneration2/data_lake_gen_2.py", line 52, in create_directory
-    self.dict_of_directory[name_directory] = directory.create_directory()
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_data_lake_directory_client.py", line 157, in create_directory
-    return self._create('directory', metadata=metadata, **kwargs)
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_path_client.py", line 195, in _create
-    process_storage_error(error)
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_deserialize.py", line 55, in process_storage_error
-    additional_data[info] = error_body[info]
-TypeError: element indices must be integers
-INFO - 06-Nov-20 22:32:20 - create_directory has been finished
-INFO - 06-Nov-20 22:32:20 - create_subdirectory has been started
-ERROR - 06-Nov-20 22:32:20 - Exception occurred in create_subdirectory
-Traceback (most recent call last):
-  File "C:/Users/Daniil Trotsenko/Documents/Educate/Python/BDS/DataLakeGeneration2/data_lake_gen_2.py", line 60, in create_subdirectory
-    self.dict_of_directory[name_subdirectory] = self.dict_of_directory[name_directory].\
-KeyError: 'folder01'
-INFO - 06-Nov-20 22:32:20 - create_subdirectory has been finished
-INFO - 06-Nov-20 22:32:20 - create_subdirectory has been started
-ERROR - 06-Nov-20 22:32:20 - Exception occurred in create_subdirectory
-Traceback (most recent call last):
-  File "C:/Users/Daniil Trotsenko/Documents/Educate/Python/BDS/DataLakeGeneration2/data_lake_gen_2.py", line 60, in create_subdirectory
-    self.dict_of_directory[name_subdirectory] = self.dict_of_directory[name_directory].\
-KeyError: 'folder02'
-INFO - 06-Nov-20 22:32:20 - create_subdirectory has been finished
+INFO - 06-Nov-20 22:47:28 - create_file_system has been finished
+INFO - 06-Nov-20 22:47:28 - create_directory has been started
+INFO - 06-Nov-20 22:47:28 - Request URL: 'https://bds0tro.dfs.core.windows.net/container03/folder01?resource=REDACTED'
+INFO - 06-Nov-20 22:47:28 - Request method: 'PUT'
+INFO - 06-Nov-20 22:47:28 - Request headers:
+INFO - 06-Nov-20 22:47:28 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 -     'x-ms-client-request-id': '48cc48f9-2071-11eb-abf4-04d4c47a1bd8'
+INFO - 06-Nov-20 22:47:28 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 22:47:28 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 22:47:28 - No body was attached to the request
+INFO - 06-Nov-20 22:47:29 - Response status: 201
+INFO - 06-Nov-20 22:47:29 - Response headers:
+INFO - 06-Nov-20 22:47:29 -     'Last-Modified': 'Fri, 06 Nov 2020 20:47:30 GMT'
+INFO - 06-Nov-20 22:47:29 -     'ETag': '"0x8D882952DA2FB2F"'
+INFO - 06-Nov-20 22:47:29 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-request-id': 'f1303a9d-001f-004e-747e-b4ce6e000000'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '48cc48f9-2071-11eb-abf4-04d4c47a1bd8'
+INFO - 06-Nov-20 22:47:29 -     'Date': 'Fri, 06 Nov 2020 20:47:29 GMT'
+INFO - 06-Nov-20 22:47:29 -     'Content-Length': '0'
+INFO - 06-Nov-20 22:47:29 - create_directory has been finished
+INFO - 06-Nov-20 22:47:29 - create_subdirectory has been started
+INFO - 06-Nov-20 22:47:29 - Request URL: 'https://bds0tro.dfs.core.windows.net/container03/folder01%2Ffolder02?resource=REDACTED'
+INFO - 06-Nov-20 22:47:29 - Request method: 'PUT'
+INFO - 06-Nov-20 22:47:29 - Request headers:
+INFO - 06-Nov-20 22:47:29 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '491bd647-2071-11eb-b00d-04d4c47a1bd8'
+INFO - 06-Nov-20 22:47:29 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 22:47:29 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 - No body was attached to the request
+INFO - 06-Nov-20 22:47:29 - Response status: 201
+INFO - 06-Nov-20 22:47:29 - Response headers:
+INFO - 06-Nov-20 22:47:29 -     'Last-Modified': 'Fri, 06 Nov 2020 20:47:30 GMT'
+INFO - 06-Nov-20 22:47:29 -     'ETag': '"0x8D882952DAD3C9D"'
+INFO - 06-Nov-20 22:47:29 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-request-id': 'f1303a9e-001f-004e-757e-b4ce6e000000'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '491bd647-2071-11eb-b00d-04d4c47a1bd8'
+INFO - 06-Nov-20 22:47:29 -     'Date': 'Fri, 06 Nov 2020 20:47:29 GMT'
+INFO - 06-Nov-20 22:47:29 -     'Content-Length': '0'
+INFO - 06-Nov-20 22:47:29 - get_sub_directory client DONE
+INFO - 06-Nov-20 22:47:29 - create_subdirectory has been finished
+INFO - 06-Nov-20 22:47:29 - create_subdirectory has been started
+INFO - 06-Nov-20 22:47:29 - Request URL: 'https://bds0tro.dfs.core.windows.net/container03/folder01%2Ffolder02%2Ffolder03?resource=REDACTED'
+INFO - 06-Nov-20 22:47:29 - Request method: 'PUT'
+INFO - 06-Nov-20 22:47:29 - Request headers:
+INFO - 06-Nov-20 22:47:29 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '49263dae-2071-11eb-afdd-04d4c47a1bd8'
+INFO - 06-Nov-20 22:47:29 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 22:47:29 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 - No body was attached to the request
+INFO - 06-Nov-20 22:47:29 - Response status: 201
+INFO - 06-Nov-20 22:47:29 - Response headers:
+INFO - 06-Nov-20 22:47:29 -     'Last-Modified': 'Fri, 06 Nov 2020 20:47:30 GMT'
+INFO - 06-Nov-20 22:47:29 -     'ETag': '"0x8D882952DB68CAE"'
+INFO - 06-Nov-20 22:47:29 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-request-id': 'f1303a9f-001f-004e-767e-b4ce6e000000'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '49263dae-2071-11eb-afdd-04d4c47a1bd8'
+INFO - 06-Nov-20 22:47:29 -     'Date': 'Fri, 06 Nov 2020 20:47:29 GMT'
+INFO - 06-Nov-20 22:47:29 -     'Content-Length': '0'
+INFO - 06-Nov-20 22:47:29 - get_sub_directory client DONE
+INFO - 06-Nov-20 22:47:29 - create_subdirectory has been finished

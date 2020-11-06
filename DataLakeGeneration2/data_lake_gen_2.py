@@ -26,7 +26,14 @@ class DataLakeG2:
     def __init__(self, connection_string=os.getenv("AZURE_DT_2"),
                  container_name_="container03",
                  file_name_='IndianFoodDatasetCSV.csv'):
-        self.dt_service = DataLakeServiceClient.from_connection_string(connection_string)
+        account_name = os.getenv('STORAGE_ACCOUNT_NAME', "")
+        account_key = os.getenv('STORAGE_ACCOUNT_KEY', "")
+
+        # set up the service client with the credentials from the environment variables
+        self.service_client = DataLakeServiceClient(account_url="{}://{}.dfs.core.windows.net".format(
+            "https",
+            account_name
+        ), credential=account_key)
         self.file_system_name = container_name_
         self.file_name = file_name_
         self.dict_inh = {}
@@ -38,18 +45,17 @@ class DataLakeG2:
             Create file system(Container)
         """
         try:
-            self.file_system_client = self.dt_service.create_file_system(file_system=self.file_system_name)
+            self.file_system_client = self.service_client.create_file_system(file_system=self.file_system_name)
             logging.info("Create_file_system - DONE")
         except Exception as ex:
             logging.error("Exception occurred in create_file_system", exc_info=True)
-            self.file_system_client = self.dt_service.get_file_system_client(file_system=self.file_system_name)
+            self.file_system_client = self.service_client.get_file_system_client(file_system=self.file_system_name)
 
     @logging_name_function
     def create_directory(self, name_directory):
         try:
-            directory = self.dt_service.get_directory_client(self.file_system_client.file_system_name, 'folder_1')
-            #directory = self.file_system_client.get_directory_client(name_directory)
-            self.dict_of_directory[name_directory] = directory.create_directory()
+            directory = self.file_system_client.create_directory(name_directory)
+            self.dict_of_directory[name_directory] = directory
             self.dict_inh[name_directory] = []
         except Exception as ex:
             logging.error("Exception occurred in create_directory", exc_info=True)
