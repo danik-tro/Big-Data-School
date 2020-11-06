@@ -1,117 +1,201 @@
-INFO - 06-Nov-20 22:47:28 - create_file_system has been started
-INFO - 06-Nov-20 22:47:28 - Request URL: 'https://bds0tro.blob.core.windows.net/container03?restype=REDACTED'
-INFO - 06-Nov-20 22:47:28 - Request method: 'PUT'
-INFO - 06-Nov-20 22:47:28 - Request headers:
-INFO - 06-Nov-20 22:47:28 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-date': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-client-request-id': '4892aa42-2071-11eb-8431-04d4c47a1bd8'
-INFO - 06-Nov-20 22:47:28 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 06-Nov-20 22:47:28 -     'Authorization': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 - No body was attached to the request
-INFO - 06-Nov-20 22:47:28 - Response status: 409
-INFO - 06-Nov-20 22:47:28 - Response headers:
-INFO - 06-Nov-20 22:47:28 -     'Content-Length': '230'
-INFO - 06-Nov-20 22:47:28 -     'Content-Type': 'application/xml'
-INFO - 06-Nov-20 22:47:28 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-request-id': '0872a55b-801e-001d-277e-b4ed5a000000'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-client-request-id': '4892aa42-2071-11eb-8431-04d4c47a1bd8'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-error-code': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 -     'Date': 'Fri, 06 Nov 2020 20:47:28 GMT'
-ERROR - 06-Nov-20 22:47:28 - Exception occurred in create_file_system
-Traceback (most recent call last):
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\blob\_container_client.py", line 280, in create_container
-    return self._client.container.create( # type: ignore
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\blob\_generated\operations\_container_operations.py", line 120, in create
-    raise models.StorageErrorException(response, self._deserialize)
-azure.storage.blob._generated.models._models_py3.StorageErrorException: Operation returned an invalid status 'The specified container already exists.'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:/Users/Daniil Trotsenko/Documents/Educate/Python/BDS/DataLakeGeneration2/data_lake_gen_2.py", line 48, in create_file_system
-    self.file_system_client = self.service_client.create_file_system(file_system=self.file_system_name)
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_data_lake_service_client.py", line 246, in create_file_system
-    file_system_client.create_file_system(metadata=metadata, public_access=public_access, **kwargs)
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\filedatalake\_file_system_client.py", line 241, in create_file_system
-    return self._container_client.create_container(metadata=metadata,
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\core\tracing\decorator.py", line 83, in wrapper_use_tracer
-    return func(*args, **kwargs)
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\blob\_container_client.py", line 288, in create_container
-    process_storage_error(error)
-  File "C:\Users\Daniil Trotsenko\anaconda3\envs\BDS\lib\site-packages\azure\storage\blob\_shared\response_handlers.py", line 147, in process_storage_error
-    raise error
-azure.core.exceptions.ResourceExistsError: The specified container already exists.
-RequestId:0872a55b-801e-001d-277e-b4ed5a000000
-Time:2020-11-06T20:47:29.5146259Z
-ErrorCode:ContainerAlreadyExists
-Error:None
-INFO - 06-Nov-20 22:47:28 - create_file_system has been finished
-INFO - 06-Nov-20 22:47:28 - create_directory has been started
-INFO - 06-Nov-20 22:47:28 - Request URL: 'https://bds0tro.dfs.core.windows.net/container03/folder01?resource=REDACTED'
-INFO - 06-Nov-20 22:47:28 - Request method: 'PUT'
-INFO - 06-Nov-20 22:47:28 - Request headers:
-INFO - 06-Nov-20 22:47:28 -     'x-ms-properties': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-date': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 -     'x-ms-client-request-id': '48cc48f9-2071-11eb-abf4-04d4c47a1bd8'
-INFO - 06-Nov-20 22:47:28 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 06-Nov-20 22:47:28 -     'Authorization': 'REDACTED'
-INFO - 06-Nov-20 22:47:28 - No body was attached to the request
-INFO - 06-Nov-20 22:47:29 - Response status: 201
-INFO - 06-Nov-20 22:47:29 - Response headers:
-INFO - 06-Nov-20 22:47:29 -     'Last-Modified': 'Fri, 06 Nov 2020 20:47:30 GMT'
-INFO - 06-Nov-20 22:47:29 -     'ETag': '"0x8D882952DA2FB2F"'
-INFO - 06-Nov-20 22:47:29 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-request-id': 'f1303a9d-001f-004e-747e-b4ce6e000000'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '48cc48f9-2071-11eb-abf4-04d4c47a1bd8'
-INFO - 06-Nov-20 22:47:29 -     'Date': 'Fri, 06 Nov 2020 20:47:29 GMT'
-INFO - 06-Nov-20 22:47:29 -     'Content-Length': '0'
-INFO - 06-Nov-20 22:47:29 - create_directory has been finished
-INFO - 06-Nov-20 22:47:29 - create_subdirectory has been started
-INFO - 06-Nov-20 22:47:29 - Request URL: 'https://bds0tro.dfs.core.windows.net/container03/folder01%2Ffolder02?resource=REDACTED'
-INFO - 06-Nov-20 22:47:29 - Request method: 'PUT'
-INFO - 06-Nov-20 22:47:29 - Request headers:
-INFO - 06-Nov-20 22:47:29 -     'x-ms-properties': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-date': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '491bd647-2071-11eb-b00d-04d4c47a1bd8'
-INFO - 06-Nov-20 22:47:29 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 06-Nov-20 22:47:29 -     'Authorization': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 - No body was attached to the request
-INFO - 06-Nov-20 22:47:29 - Response status: 201
-INFO - 06-Nov-20 22:47:29 - Response headers:
-INFO - 06-Nov-20 22:47:29 -     'Last-Modified': 'Fri, 06 Nov 2020 20:47:30 GMT'
-INFO - 06-Nov-20 22:47:29 -     'ETag': '"0x8D882952DAD3C9D"'
-INFO - 06-Nov-20 22:47:29 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-request-id': 'f1303a9e-001f-004e-757e-b4ce6e000000'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '491bd647-2071-11eb-b00d-04d4c47a1bd8'
-INFO - 06-Nov-20 22:47:29 -     'Date': 'Fri, 06 Nov 2020 20:47:29 GMT'
-INFO - 06-Nov-20 22:47:29 -     'Content-Length': '0'
-INFO - 06-Nov-20 22:47:29 - get_sub_directory client DONE
-INFO - 06-Nov-20 22:47:29 - create_subdirectory has been finished
-INFO - 06-Nov-20 22:47:29 - create_subdirectory has been started
-INFO - 06-Nov-20 22:47:29 - Request URL: 'https://bds0tro.dfs.core.windows.net/container03/folder01%2Ffolder02%2Ffolder03?resource=REDACTED'
-INFO - 06-Nov-20 22:47:29 - Request method: 'PUT'
-INFO - 06-Nov-20 22:47:29 - Request headers:
-INFO - 06-Nov-20 22:47:29 -     'x-ms-properties': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-date': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '49263dae-2071-11eb-afdd-04d4c47a1bd8'
-INFO - 06-Nov-20 22:47:29 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
-INFO - 06-Nov-20 22:47:29 -     'Authorization': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 - No body was attached to the request
-INFO - 06-Nov-20 22:47:29 - Response status: 201
-INFO - 06-Nov-20 22:47:29 - Response headers:
-INFO - 06-Nov-20 22:47:29 -     'Last-Modified': 'Fri, 06 Nov 2020 20:47:30 GMT'
-INFO - 06-Nov-20 22:47:29 -     'ETag': '"0x8D882952DB68CAE"'
-INFO - 06-Nov-20 22:47:29 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-request-id': 'f1303a9f-001f-004e-767e-b4ce6e000000'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-version': 'REDACTED'
-INFO - 06-Nov-20 22:47:29 -     'x-ms-client-request-id': '49263dae-2071-11eb-afdd-04d4c47a1bd8'
-INFO - 06-Nov-20 22:47:29 -     'Date': 'Fri, 06 Nov 2020 20:47:29 GMT'
-INFO - 06-Nov-20 22:47:29 -     'Content-Length': '0'
-INFO - 06-Nov-20 22:47:29 - get_sub_directory client DONE
-INFO - 06-Nov-20 22:47:29 - create_subdirectory has been finished
+INFO - 06-Nov-20 23:14:55 - create_file_system has been started
+INFO - 06-Nov-20 23:14:55 - Request URL: 'https://bds0tro.blob.core.windows.net/container06?restype=REDACTED'
+INFO - 06-Nov-20 23:14:55 - Request method: 'PUT'
+INFO - 06-Nov-20 23:14:55 - Request headers:
+INFO - 06-Nov-20 23:14:55 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:55 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:14:55 -     'x-ms-client-request-id': '1e0a4fc0-2075-11eb-b87d-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:55 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:14:55 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:14:55 - No body was attached to the request
+INFO - 06-Nov-20 23:14:55 - Response status: 201
+INFO - 06-Nov-20 23:14:55 - Response headers:
+INFO - 06-Nov-20 23:14:55 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:14:55 -     'Last-Modified': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:55 -     'ETag': '"0x8D8829902CD7E3C"'
+INFO - 06-Nov-20 23:14:55 -     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:14:55 -     'x-ms-request-id': 'b6ed1dc8-c01e-009a-3081-b47e3f000000'
+INFO - 06-Nov-20 23:14:55 -     'x-ms-client-request-id': '1e0a4fc0-2075-11eb-b87d-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:55 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:55 -     'Date': 'Fri, 06 Nov 2020 21:14:55 GMT'
+INFO - 06-Nov-20 23:14:55 - Create_file_system - DONE
+INFO - 06-Nov-20 23:14:55 - create_file_system has been finished
+INFO - 06-Nov-20 23:14:55 - create_directory has been started
+INFO - 06-Nov-20 23:14:55 - Request URL: 'https://bds0tro.dfs.core.windows.net/container06/folder01?resource=REDACTED'
+INFO - 06-Nov-20 23:14:55 - Request method: 'PUT'
+INFO - 06-Nov-20 23:14:55 - Request headers:
+INFO - 06-Nov-20 23:14:55 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 23:14:55 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:55 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:14:55 -     'x-ms-client-request-id': '1e4c305b-2075-11eb-8e76-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:55 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:14:55 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:14:55 - No body was attached to the request
+INFO - 06-Nov-20 23:14:56 - Response status: 201
+INFO - 06-Nov-20 23:14:56 - Response headers:
+INFO - 06-Nov-20 23:14:56 -     'Last-Modified': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'ETag': '"0x8D8829903131CAC"'
+INFO - 06-Nov-20 23:14:56 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-request-id': '760a27ce-e01f-008d-0481-b4d734000000'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1e4c305b-2075-11eb-8e76-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'Date': 'Fri, 06 Nov 2020 21:14:55 GMT'
+INFO - 06-Nov-20 23:14:56 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:14:56 - create_directory has been finished
+INFO - 06-Nov-20 23:14:56 - create_subdirectory has been started
+INFO - 06-Nov-20 23:14:56 - Request URL: 'https://bds0tro.dfs.core.windows.net/container06/folder01%2Ffolder02?resource=REDACTED'
+INFO - 06-Nov-20 23:14:56 - Request method: 'PUT'
+INFO - 06-Nov-20 23:14:56 - Request headers:
+INFO - 06-Nov-20 23:14:56 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1e8b232b-2075-11eb-8546-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:14:56 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 - No body was attached to the request
+INFO - 06-Nov-20 23:14:56 - Response status: 201
+INFO - 06-Nov-20 23:14:56 - Response headers:
+INFO - 06-Nov-20 23:14:56 -     'Last-Modified': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'ETag': '"0x8D88299031B4C63"'
+INFO - 06-Nov-20 23:14:56 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-request-id': '760a27cf-e01f-008d-0581-b4d734000000'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1e8b232b-2075-11eb-8546-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'Date': 'Fri, 06 Nov 2020 21:14:55 GMT'
+INFO - 06-Nov-20 23:14:56 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:14:56 - get_sub_directory client DONE
+INFO - 06-Nov-20 23:14:56 - create_subdirectory has been finished
+INFO - 06-Nov-20 23:14:56 - create_subdirectory has been started
+INFO - 06-Nov-20 23:14:56 - Request URL: 'https://bds0tro.dfs.core.windows.net/container06/folder01%2Ffolder02%2Ffolder03?resource=REDACTED'
+INFO - 06-Nov-20 23:14:56 - Request method: 'PUT'
+INFO - 06-Nov-20 23:14:56 - Request headers:
+INFO - 06-Nov-20 23:14:56 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1e9361e6-2075-11eb-b057-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:14:56 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 - No body was attached to the request
+INFO - 06-Nov-20 23:14:56 - Response status: 201
+INFO - 06-Nov-20 23:14:56 - Response headers:
+INFO - 06-Nov-20 23:14:56 -     'Last-Modified': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'ETag': '"0x8D8829903238838"'
+INFO - 06-Nov-20 23:14:56 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-request-id': '760a27d0-e01f-008d-0681-b4d734000000'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1e9361e6-2075-11eb-b057-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'Date': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:14:56 - get_sub_directory client DONE
+INFO - 06-Nov-20 23:14:56 - create_subdirectory has been finished
+INFO - 06-Nov-20 23:14:56 - create_subdirectory has been started
+INFO - 06-Nov-20 23:14:56 - Request URL: 'https://bds0tro.dfs.core.windows.net/container06/folder01%2Ffolder02%2Ffolder03%2Ffolder04?resource=REDACTED'
+INFO - 06-Nov-20 23:14:56 - Request method: 'PUT'
+INFO - 06-Nov-20 23:14:56 - Request headers:
+INFO - 06-Nov-20 23:14:56 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1e9ba418-2075-11eb-90c0-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:14:56 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 - No body was attached to the request
+INFO - 06-Nov-20 23:14:56 - Response status: 201
+INFO - 06-Nov-20 23:14:56 - Response headers:
+INFO - 06-Nov-20 23:14:56 -     'Last-Modified': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'ETag': '"0x8D88299032BD2F9"'
+INFO - 06-Nov-20 23:14:56 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-request-id': '760a27d1-e01f-008d-0781-b4d734000000'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1e9ba418-2075-11eb-90c0-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'Date': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:14:56 - get_sub_directory client DONE
+INFO - 06-Nov-20 23:14:56 - create_subdirectory has been finished
+INFO - 06-Nov-20 23:14:56 - create_subdirectory has been started
+INFO - 06-Nov-20 23:14:56 - Request URL: 'https://bds0tro.dfs.core.windows.net/container06/folder01%2Ffolder02%2Ffolder03%2Ffolder04%2Ffolder05?resource=REDACTED'
+INFO - 06-Nov-20 23:14:56 - Request method: 'PUT'
+INFO - 06-Nov-20 23:14:56 - Request headers:
+INFO - 06-Nov-20 23:14:56 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1ea3decd-2075-11eb-83be-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:14:56 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 - No body was attached to the request
+INFO - 06-Nov-20 23:14:56 - Response status: 201
+INFO - 06-Nov-20 23:14:56 - Response headers:
+INFO - 06-Nov-20 23:14:56 -     'Last-Modified': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'ETag': '"0x8D88299033414AD"'
+INFO - 06-Nov-20 23:14:56 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-request-id': '760a27d2-e01f-008d-0881-b4d734000000'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1ea3decd-2075-11eb-83be-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'Date': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:14:56 - get_sub_directory client DONE
+INFO - 06-Nov-20 23:14:56 - create_subdirectory has been finished
+INFO - 06-Nov-20 23:14:56 - show_directory has been started
+INFO - 06-Nov-20 23:14:56 - show_directory has been finished
+INFO - 06-Nov-20 23:14:56 - upload_file_to_the_directory has been started
+INFO - 06-Nov-20 23:14:56 - Request URL: 'https://bds0tro.dfs.core.windows.net/container06/folder01%2Ffolder02%2Ffolder03%2Ffolder04%2FIndianFoodDatasetCSV.csv?resource=REDACTED'
+INFO - 06-Nov-20 23:14:56 - Request method: 'PUT'
+INFO - 06-Nov-20 23:14:56 - Request headers:
+INFO - 06-Nov-20 23:14:56 -     'x-ms-properties': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1eac3f5c-2075-11eb-8f8d-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:14:56 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 - No body was attached to the request
+INFO - 06-Nov-20 23:14:56 - Response status: 201
+INFO - 06-Nov-20 23:14:56 - Response headers:
+INFO - 06-Nov-20 23:14:56 -     'Last-Modified': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'ETag': '"0x8D88299033D1360"'
+INFO - 06-Nov-20 23:14:56 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-request-id': '760a27d3-e01f-008d-0981-b4d734000000'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1eac3f5c-2075-11eb-8f8d-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'Date': 'Fri, 06 Nov 2020 21:14:56 GMT'
+INFO - 06-Nov-20 23:14:56 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:14:56 - Request URL: 'https://bds0tro.dfs.core.windows.net/container06/folder01%2Ffolder02%2Ffolder03%2Ffolder04%2FIndianFoodDatasetCSV.csv?position=REDACTED&action=REDACTED'
+INFO - 06-Nov-20 23:14:56 - Request method: 'PATCH'
+INFO - 06-Nov-20 23:14:56 - Request headers:
+INFO - 06-Nov-20 23:14:56 -     'Content-Type': 'application/json; charset=utf-8'
+INFO - 06-Nov-20 23:14:56 -     'Content-Length': '24151935'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 -     'x-ms-client-request-id': '1eb70d71-2075-11eb-b2bb-04d4c47a1bd8'
+INFO - 06-Nov-20 23:14:56 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:14:56 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:14:56 - A body is sent with the request
+INFO - 06-Nov-20 23:15:01 - Response status: 202
+INFO - 06-Nov-20 23:15:01 - Response headers:
+INFO - 06-Nov-20 23:15:01 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-request-server-encrypted': 'REDACTED'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-request-id': '760a27d4-e01f-008d-0a81-b4d734000000'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-client-request-id': '1eb70d71-2075-11eb-b2bb-04d4c47a1bd8'
+INFO - 06-Nov-20 23:15:01 -     'Date': 'Fri, 06 Nov 2020 21:15:01 GMT'
+INFO - 06-Nov-20 23:15:01 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:15:01 - Request URL: 'https://bds0tro.dfs.core.windows.net/container06/folder01%2Ffolder02%2Ffolder03%2Ffolder04%2FIndianFoodDatasetCSV.csv?position=REDACTED&retainUncommittedData=REDACTED&close=REDACTED&action=REDACTED'
+INFO - 06-Nov-20 23:15:01 - Request method: 'PATCH'
+INFO - 06-Nov-20 23:15:01 - Request headers:
+INFO - 06-Nov-20 23:15:01 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-date': 'REDACTED'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-client-request-id': '21d3b2bc-2075-11eb-9a03-04d4c47a1bd8'
+INFO - 06-Nov-20 23:15:01 -     'User-Agent': 'azsdk-python-storage-dfs/12.1.2 Python/3.8.5 (Windows-10-10.0.17763-SP0)'
+INFO - 06-Nov-20 23:15:01 -     'Authorization': 'REDACTED'
+INFO - 06-Nov-20 23:15:01 - No body was attached to the request
+INFO - 06-Nov-20 23:15:01 - Response status: 200
+INFO - 06-Nov-20 23:15:01 - Response headers:
+INFO - 06-Nov-20 23:15:01 -     'Last-Modified': 'Fri, 06 Nov 2020 21:15:02 GMT'
+INFO - 06-Nov-20 23:15:01 -     'ETag': '"0x8D8829906655A22"'
+INFO - 06-Nov-20 23:15:01 -     'Server': 'Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-request-server-encrypted': 'REDACTED'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-request-id': '760a281c-e01f-008d-4f81-b4d734000000'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-version': 'REDACTED'
+INFO - 06-Nov-20 23:15:01 -     'x-ms-client-request-id': '21d3b2bc-2075-11eb-9a03-04d4c47a1bd8'
+INFO - 06-Nov-20 23:15:01 -     'Date': 'Fri, 06 Nov 2020 21:15:01 GMT'
+INFO - 06-Nov-20 23:15:01 -     'Content-Length': '0'
+INFO - 06-Nov-20 23:15:01 - upload_file_to_the_directory has been finished

@@ -24,8 +24,7 @@ class DataLakeG2:
                         filemode='w')
 
     def __init__(self, connection_string=os.getenv("AZURE_DT_2"),
-                 container_name_="container03",
-                 file_name_='IndianFoodDatasetCSV.csv'):
+                 container_name_="container06"):
         account_name = os.getenv('STORAGE_ACCOUNT_NAME', "")
         account_key = os.getenv('STORAGE_ACCOUNT_KEY', "")
 
@@ -71,6 +70,24 @@ class DataLakeG2:
         except Exception as ex:
             logging.error("Exception occurred in create_subdirectory", exc_info=True)
 
+    @logging_name_function
+    def upload_file_to_the_directory(self, file_name, directory_name):
+        try:
+            file_client = self.dict_of_directory[directory_name].create_file(file_name)
+            local_file = open(file_name, 'rb')
+
+            file_contents = local_file.read()
+            file_client.append_data(data=file_contents, offset=0, length=len(file_contents))
+
+            file_client.flush_data(len(file_contents))
+        except Exception as ex:
+            logging.error("Exception occurred in upload_file_to_the_directory", exc_info=True)
+
+    @logging_name_function
+    def show_directory(self):
+        print(f'All directory: {self.dict_of_directory}')
+        print(f'Subdirectory {self.dict_inh}')
+
 
 def main():
     dt = DataLakeG2()
@@ -78,6 +95,10 @@ def main():
     dt.create_directory("folder01")
     dt.create_subdirectory('folder01', 'folder02')
     dt.create_subdirectory('folder02', 'folder03')
+    dt.create_subdirectory('folder03', 'folder04')
+    dt.create_subdirectory('folder04', 'folder05')
+    dt.show_directory()
+    dt.upload_file_to_the_directory("IndianFoodDatasetCSV.csv", "folder04")
 
 
 if __name__ == "__main__":
