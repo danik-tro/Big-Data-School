@@ -47,9 +47,10 @@ class DataLakeG2:
     @logging_name_function
     def create_directory(self, name_directory):
         try:
-            self.file_system_client.create_directory(name_directory)
-            #self.dict_of_directory[name_directory] =
-            #self.dict_inh[name_directory] = []
+            directory = self.dt_service.get_directory_client(self.file_system_client.file_system_name, 'folder_1')
+            #directory = self.file_system_client.get_directory_client(name_directory)
+            self.dict_of_directory[name_directory] = directory.create_directory()
+            self.dict_inh[name_directory] = []
         except Exception as ex:
             logging.error("Exception occurred in create_directory", exc_info=True)
 
