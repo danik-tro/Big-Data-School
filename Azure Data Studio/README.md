@@ -4,7 +4,7 @@
 ## 3. Create User and Schema
 ````
 CREATE LOGIN d_trotsenko
-	WITH PASSWORD = '!dFg#0*^hgn^'
+	WITH PASSWORD = '****'
 GO
 
 CREATE SCHEMA d_trotsenko_schema
@@ -22,8 +22,8 @@ GO
 ````
 CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredentialTrotsenko
     WITH
-        IDENTITY = 'bds01tro',
-        SECRET = 'jnbr6t4qlKDnIUTZVtJItkO9osoTZVsnCuPp+BEzB/1zYOu/VXwSr36L4ZaJGCFm+qkTGPn54nXpFE+M+0At8Q=='
+        IDENTITY = 'AzureStorageAccount',
+        SECRET = 'AccountKeys'
 		GO
 
 CREATE EXTERNAL DATA SOURCE trotsenko_ext WITH (
