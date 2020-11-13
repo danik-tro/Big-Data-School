@@ -1,0 +1,7 @@
+connection_string = HostName=trotsenkohub.azure-devices.net;DeviceId=TrotsenkoDevice;SharedAccessKey=70GipxbliHDsuaIJcgXuhJRDnmGfiYNWRT/hnX0qL/c=
+HostName={trotsenkohub}.azure-devices.net;DeviceId=TrotsenkoDevice;SharedAccessKey=
+
+Next 3 values
+"sb://iothub-ns-trotsenkoh-5908569-18bda5fadb.servicebus.windows.net/"
+"trotsenkohub"
+"aHu7wTh2uNeg6TenQO7CKywRiM4NxXDMFEnadCVB31w="
